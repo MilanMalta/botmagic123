@@ -1,5 +1,5 @@
-import time
+import requests
 
-while True:
-	print("I am working!")
-	time.sleep(2)
+res = requests.get('https://api.ipify.org?format=json')
+
+print(res.text)
